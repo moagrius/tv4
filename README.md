@@ -5,8 +5,8 @@ The TileView widget is a subclass of ViewGroup renders and positions bitmap tile
 
 ![tileview](https://user-images.githubusercontent.com/701344/41755597-c5986472-759d-11e8-83d9-f588b04f475d.gif)
 
-Vesion 4 is effectively the promotion of version 3 from beta to production-ready, fixing the issues brought up by you, the users.  While normally this'd probably be done using a
-series of minor version bumps, and this might be 3.4.11, there was a change to the base package name, and this requires a major change according to semver, since it's a breaking change for past versions.
+Vesion 4 is effectively the promotion of version 3 from beta to production-ready, fixing the issues reported by users.  While normally this'd probably be done using a
+series of minor and patch level version bumps, and this might be 3.4.11, there was a change to the base package name, and this requires a major change according to semver, since it's a breaking change for all prior versions.
 
 Also of note, the universal (2-D) ScrollView class, and related classes like ScalingScrollView (which is a subclass of the 2D universal ScrollView, but also manages scaling and scale gestures) is now it's own repository: https://github.com/moagrius/ScrollView, and available with `implementation 'com.moagrius:scrollview:1.0.3'`.  It is now included in the TileView project using normal gradle dependency operations, specifically using `api` rather than `implementation` but otherwise similar to other dependencies and is being pulled down from jcenter and reconciled normally.
 
@@ -21,11 +21,10 @@ Out of the box, the TileView will manage the tiled image, including subsampling 
 
 Additional plugins are provided to allow adding overlaying Views (markers), info windows, hot spots, path drawing, and coordinate translation.
 
-Version 4 is fairly young.  If you're need a stable version, the last release of version 2 is 2.7.7, and is available as a branch, here: https://github
-.com/moagrius/TileView/tree/version-2.7.7, or from the [releases page](https://github.com/moagrius/TileView/releases).  You can also get it from gradle using the old namespace:
+Version 4 is fairly young.  If you're need a stable version, the last release of version 2 is 2.7.7, and is available as a branch, here: https://github.com/moagrius/TileView/tree/version-2.7.7, or from the [releases page](https://github.com/moagrius/TileView/releases).  You can also get it from gradle using the old namespace:
 `implementation 'com.qozix:tileview:2.7.7'`
 
-No further work will be done on version 2.
+No further work will be done on version 2 or 3.  Version 4 is the current release, and will be actively supported.
 
 **This is truly open source.**  I'm very happy to accept improvements or bug fixes - no caveats; create an issue, branch, and create a PR.  While I'm not super interested in finding bugs and don't want the issues page to become a wasteland (I already know what most of them are, and will start to document them as this make its way into the wild), I am very interested in fixing those bugs - if you have the time to locate and correct a bug, please open a PR.
 
